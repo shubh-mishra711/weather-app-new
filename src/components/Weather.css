@@ -1,0 +1,87 @@
+/* Weather.css */
+
+.weather-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e58a8a;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weather-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .weather-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .weather-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .weather-input button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .weather-icon img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+  }
+  
+  .weather-details {
+    margin-left: 20px;
+  }
+  
+  .weather-description {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .weather-temperature {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .weather-humidity,
+  .weather-wind,
+  .weather-pressure {
+    margin: 5px 0;
+  }
+  
+  .weather-history-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .weather-history-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  

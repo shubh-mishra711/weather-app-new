@@ -1,0 +1,315 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+
+
+  }
+
+  .header {
+    background-color: #c9b1b1;
+    background-color: rgba(245, 245, 245, 0.2);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    position: relative; /* Add relative positioning to the header */
+    
+    
+  } 
+
+
+  .header-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(245, 245, 245, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .header-title {
+    margin: 0;
+  }
+
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .select {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .country-details {
+    margin-top: 20px;
+    text-align: center;
+    width: 350px;
+    border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #8ecf59;
+  height: 49vh;
+  }
+
+  .Currency{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #c178cf;
+  width: 30%;
+  margin-bottom: 15px;
+
+  }
+
+  .result{
+    font-size: 22px;
+  }
+
+  .country-details {
+    text-align: center;
+    height: 400px;
+  }
+  
+  .country-details-heading {
+    margin-bottom: 10px;
+  }
+  
+  .country-details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flag-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+
+  .flag-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .country-flag {
+    width: 200px;
+    height: auto;
+  }
+
+  .country-details-info {
+    /* text-align: left; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: medium;
+  }
+  .country-details-info p {
+    margin: 20px;
+    font-size: medium;
+  }
+ 
+  
+  
+  .country-facts{
+  margin-top: 20px;
+  text-align: center;
+  width: 550px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #c7cf4c;
+  }
+
+  
+
+
+  .place-info{
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 80%;
+    max-height: 50%;
+
+    border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  /* box-shadow: 2px slategrey; */
+  background-color: #70abc7;
+  }
+
+
+
+  .weather-details {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    /* max-height: 50%; */
+    height: 400px;
+
+
+    border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #c76d6d;
+
+  }
+
+  .weather-icon {
+    /* margin: 10px 10px; */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* .weather-details p {
+    margin: 0% 1
+  } */
+  
+  .weather-details {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .weather-heading {
+    margin-top: 10px;
+  }
+  
+  .weather-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .weather-icon-container {
+    /* margin-right: 10px; */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .weather-info {
+    text-align: center;
+    
+
+  }
+  .weather-info p {
+    margin: 10px 0;
+  }
+  
+  .top-cities-weather {
+    text-align: center;
+    border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 2px slategrey;
+  background-color: #9cbe5d;
+
+  }
+  
+  .top-cities-heading {
+    margin-top: 20px;
+  }
+  
+  .city-weather {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .city-weather-item-0 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    
+    
+  }
+  
+  .city-weather-item {
+    width: 20%;
+    margin: 0 10px;
+  }
+  .weather-icon-container{
+    margin-left: 0px;
+  }
+  .footer-container {
+    background-color: #3d3d3d;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+
+  }
+  
+  .footer-text {
+    margin: 0;
+    font-size: 14px;
+  }
+
+
+  .details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 15px 0;
+  }
+  
+  .country-details {
+    /* ... (your existing CSS rules for .country-details) */
+    flex-basis: 48%;
+  }
+  
+  .weather-details {
+    /* ... (your existing CSS rules for .weather-details) */
+    flex-basis: 48%;
+  }
+
+  
+
