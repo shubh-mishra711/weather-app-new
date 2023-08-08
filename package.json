@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "WeatherApp1",
   "dependencies": {
     "@elastic/apm-rum": "^5.14.0",
     "@elastic/apm-rum-react": "^1.4.4",
