@@ -16,21 +16,6 @@ const CurrencyConverter = () => {
   const [mapCenter, setMapCenter] = useState([0, 0]);
   const [mapZoom, setMapZoom] = useState(1);
 
-  const [previousCountryDetails, setPreviousCountryDetails] = useState(null);
-  const [previousWeather, setPreviousWeather] = useState(null);
-
-  useEffect(() => {
-    if (countryDetails) {
-      setPreviousCountryDetails(countryDetails);
-    }
-  }, [countryDetails]);
-
-  useEffect(() => {
-    if (weather) {
-      setPreviousWeather(weather);
-    }
-  }, [weather]);
-
   useEffect(() => {
     convertCurrency();
   }, [amount, fromCurrency, toCurrency]);
@@ -158,8 +143,6 @@ const CurrencyConverter = () => {
   const handleCountryChange = (e) => {
     const selectedCountryCode = e.target.value;
     const selectedCountry = countries.find((country) => country.cca3 === selectedCountryCode);
-    setPreviousCountryDetails(countryDetails);
-    setPreviousWeather(weather);
     setCountryDetails(selectedCountry);
     setWeather(null);
   };
@@ -236,46 +219,46 @@ const CurrencyConverter = () => {
           </div>
         )}
         
-        {countries.length > 0 && (countryDetails || previousCountryDetails) && (weather || previousWeather) && (
+        {countries.length > 0 && countryDetails && weather && (
           <div className="details-container">
             <div className="country-details">
-              <h2 className="country-details-heading">Country Details</h2>
-              <div className="country-details-content">
-                <div className="flag-container">
-                  <img
-                    src={(countryDetails || previousCountryDetails).flags.png}
-                    alt={(countryDetails || previousCountryDetails).name.common}
-                    className="country-flag"
-                  />
-                </div>
-                <div className="country-details-info">
-                  <p>Name: {(countryDetails || previousCountryDetails).name.common}</p>
-                  <p>Capital: {(countryDetails || previousCountryDetails).capital[0]}</p>
-                  <p>Population: {(countryDetails || previousCountryDetails).population}</p>
-                  {/* Add more country details as needed */}
-                </div>
+            <h2 className="country-details-heading">Country Details</h2>
+            <div className="country-details-content">
+              <div className="flag-container">
+                <img
+                  src={countryDetails.flags.png}
+                  alt={countryDetails.name.common}
+                  className="country-flag"
+                />
+              </div>
+              <div className="country-details-info">
+                <p>Name: {countryDetails.name.common}</p>
+                <p>Capital: {countryDetails.capital[0]}</p>
+                <p>Population: {countryDetails.population}</p>
+                {/* Add more country details as needed */}
               </div>
             </div>
+            </div>
             <div className="weather-details">
-              <h2 className="weather-heading">Weather Details</h2>
-              <div className="weather-content">
-                <div className="weather-icon-container">
-                  <img
-                    src={`http://openweathermap.org/img/wn/${(weather || previousWeather).weather[0].icon}.png`}
-                    alt="Weather Icon"
-                    className="weather-icon"
-                  />
-                </div>
-                <div className="weather-info">
-                  <p>Location: {(countryDetails || previousCountryDetails).name.common}</p>
-                  <p>Temperature: {(weather || previousWeather).main.temp}°C</p>
-                  <p className="weather-w">Weather: {(weather || previousWeather).weather[0].description}</p>
-                  <p className="weather-humidity">Humidity: {(weather || previousWeather).main.humidity}%</p>
-                  <p className="weather-wind">Wind: {(weather || previousWeather).wind.speed} km/h</p>
-                  <p className="weather-pressure">Pressure: {(weather || previousWeather).main.pressure} hPa</p>
-                  {/* Add more weather details as needed */}
-                </div>
+            <h2 className="weather-heading">Weather Details</h2>
+            <div className="weather-content">
+              <div className="weather-icon-container">
+                <img
+                  src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
+                  alt="Weather Icon"
+                  className="weather-icon"
+                />
               </div>
+              <div className="weather-info">
+                <p>Location: {countryDetails.name.common}</p>
+                <p>Temperature: {weather.main.temp}°C</p>
+                <p className="weather-w">Weather: {weather.weather[0].description}</p>
+                <p className="weather-humidity">Humidity: {weather.main.humidity}%</p>
+                <p className="weather-wind">Wind: {weather.wind.speed} km/h</p>
+                <p className="weather-pressure">Pressure: {weather.main.pressure} hPa</p>
+                {/* Add more weather details as needed */}
+              </div>
+            </div>
             </div>
           </div>
         )}
