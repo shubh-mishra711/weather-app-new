@@ -214,9 +214,7 @@ const CurrencyConverter = () => {
             {/* Add more currency options as needed */}
           </select>
         </div>
-        <button className="button" onClick={handleConvertClick} disabled={!toCurrency}>
-          Convert
-        </button>
+
         {error && <div className="error">{error}</div>}
         <div className="result">
           Converted Amount: {convertedAmount} {toCurrency}
